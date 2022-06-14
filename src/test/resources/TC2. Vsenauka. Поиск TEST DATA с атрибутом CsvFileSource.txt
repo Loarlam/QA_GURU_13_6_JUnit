@@ -1,0 +1,18 @@
+NAME: при поиске на vsenauka.ru по году издания {TEST DATA[0]} в результатах отображается текст {TEST DATA[1]}
+
+TEST DATA: [2020 / Истоки морали. В поисках человеческого у приматов,
+            2021 / Что такое наука и как она работает]
+
+PRIORITY: Medium
+
+PRECONDITIONS:
+- открыть браузер
+- открыть ссылку https://vsenauka.ru/knigi/vsenauchnyie-knigi/
+
+STEPS:
+- нажать на фрейм "год издания"
+- в поле "год издания" ввести {TEST DATA[0]}
+- нажать кнопку Enter
+
+EXPECTED RESULTS:
+- в результатах отображается текст {TEST DATA[1]}

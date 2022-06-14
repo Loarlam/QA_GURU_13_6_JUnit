@@ -1,0 +1,17 @@
+NAME: при поиске на vsenauka.ru по запросу {0} в результатах отображается текст {0}
+
+TEST DATA: [Докинз, Марков]
+
+PRIORITY: Medium
+
+PRECONDITIONS:
+- открыть браузер
+- открыть ссылку https://vsenauka.ru/knigi/vsenauchnyie-knigi/
+- в поле "автор" ввести {TEST DATA}
+
+STEPS:
+- в поле поиска книг по автору ввести текст {TEST DATA}
+- нажать кнопку Enter
+
+EXPECTED RESULTS:
+- в результатах отображается текст {TEST DATA}
