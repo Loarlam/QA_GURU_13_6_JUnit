@@ -3,10 +3,12 @@ package ru.vsenauka;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class PageOfBookSearch {
-    private SelenideElement author = $("input[name='author']"),
+    private SelenideElement bookOnPage = $(".book-result"),
+            author = $("input[name='author']"),
             yearFrom = $("a[href='#book3']"),
             yearOfPublishing = $("input[name='year_since']"),
             checkResultOnPage = $(".result.row");
@@ -29,7 +31,7 @@ public class PageOfBookSearch {
     }
 
     public PageOfBookSearch checkingOutBooks() {
-        $(".book-result").should(exist);
+        bookOnPage.should(exist);
         return this;
     }
 
