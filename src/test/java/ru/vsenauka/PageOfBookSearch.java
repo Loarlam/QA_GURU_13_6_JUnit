@@ -20,13 +20,15 @@ public class PageOfBookSearch {
     }
 
     public PageOfBookSearch settingFirstName(String authorName) {
-        author.setValue(authorName).pressEnter();
+        author.setValue(authorName).
+                pressEnter();
         return this;
     }
 
     public PageOfBookSearch settingYearFromSearch(String startYearFromSearch) {
         yearFrom.click();
-        yearOfPublishing.setValue(startYearFromSearch).pressEnter();
+        yearOfPublishing.setValue(startYearFromSearch).
+                pressEnter();
         return this;
     }
 
@@ -36,7 +38,8 @@ public class PageOfBookSearch {
     }
 
     public PageOfBookSearch checkingResultFormValues(String validateValue) {
-        checkResultOnPage.shouldHave(text(validateValue)).shouldBe(visible);
+        checkResultOnPage.shouldHave(text(validateValue)).
+                shouldBe(visible);
         return this;
     }
 }
