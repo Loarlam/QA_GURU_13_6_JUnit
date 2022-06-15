@@ -49,8 +49,8 @@ public class BookSearchForm extends BaseTest {
                 checkingResultFormValues(searchData);
     }
 
-    @EnumSource(YearsWithBooks.class)
-    @ParameterizedTest(name = "При поиске {0} в результатах отображается текст {1}")
+    @EnumSource(value = YearsWithBooks.class, names = {"FIRST_BOOK", "SECOND_BOOK"})
+    @ParameterizedTest(name = "Поиск по значениям перечисляемого параметра {0}")
     void parametrizingTestWithEnumSource(YearsWithBooks yearsWithBooks) {
         pageOfBookSearch.openingWebsite().
                 settingYearFromSearch(yearsWithBooks.getYear()).
